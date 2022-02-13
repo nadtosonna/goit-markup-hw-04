@@ -176,6 +176,26 @@ header {
   margin-right: 30px;
   width: calc((100% - 90px) / 4);
 }
+.features-list::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 30px;
+}
+.features-list:nth-child(1)::before {
+  background-image: url(../images/features/Group\ 1.svg);
+}
+.features-list:nth-child(2)::before {
+  background-image: url(../images/features/Group\ 2.svg);
+}
+.features-list:nth-child(3)::before {
+  background-image: url(../images/features/Group\ 3.svg);
+}
+.features-list:nth-child(4)::before {
+  background-image: url(../images/features/Group\ 4.svg);
+}
 .features-list:nth-child(4) {
   margin-right: 0;
 }
