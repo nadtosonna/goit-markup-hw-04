@@ -113,19 +113,47 @@ header {
 }
 .contacts-header {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 .contacts-header .contacts + .contacts {
   margin-left: 50px;
+}
+.contacts {
+  display: flex;
+  align-items: center;
 }
 .contacts .link {
   padding: 32px 0;
   color: var(--main-text-color);
   font-weight: 500;
 }
+.contacts::before {
+  display: inline-block;
+  margin-right: 10px;
+  content: '';
+  background-size: contain;
+  color: var(--main-text-color);
+}
+.contacts.email::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/envelope.svg);
+}
+.contacts.tel::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/smartphone.svg);
+  background-repeat: no-repeat;
+}
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
+}
+.contacts.email:hover::before,
+.contacts.tel:hover::before {
+  color: var(--accent-color);
+  cursor: pointer;
 }
 .hero {
   height: 600px;
@@ -241,6 +269,7 @@ header {
 .team-member {
   margin-right: 30px;
   background-color: var(--invert-text-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .team-member:nth-child(4) {
   margin-right: 0;
@@ -259,6 +288,9 @@ header {
   padding-bottom: 60px;
   background-color: var(--background-color);
 }
+.footer-block {
+  display: flex;
+}
 .logo.footer-logo {
   margin-right: 0;
 }
@@ -271,13 +303,24 @@ header {
   color: var(--invert-text-color);
 }
 .footer-contact {
-  display: block;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
 }
 .footer-contact.email {
   display: block;
   margin-bottom: 9px;
+}
+.socials {
+  margin-left: 70px;
+  margin-bottom: 20px;
+}
+.join {
+  color: var(--invert-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /* Стили для portfolio.html */
@@ -317,6 +360,10 @@ header {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+.projects-item:hover,
+.projects-item:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .projects-item:nth-child(3n) {
   margin-right: 0;
