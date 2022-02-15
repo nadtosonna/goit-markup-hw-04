@@ -361,10 +361,6 @@ header {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.projects-item:hover,
-.projects-item:focus {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
 .projects-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -389,3 +385,4 @@ header {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
 }
+
