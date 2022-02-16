@@ -64,8 +64,16 @@ header {
   padding-bottom: 94px;
 }
 .visually-hidden {
-  position: fixed;
-  transform: scale(0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .container.header-container {
   display: flex;
@@ -134,14 +142,11 @@ header {
   color: var(--accent-color);
 }
 .icon-header {
-  display: block;
-  padding: 32px 0;
   margin-right: 10px;
   fill: var(--main-text-color);
 }
-.icon-header:hover {
+.contacts .link:hover .icon-header {
   fill: var(--accent-color);
-  cursor: pointer;
 }
 
 .hero {
@@ -257,7 +262,7 @@ header {
 }
 .networks {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 16px;
 }
 .networks-item:not(:last-child) {
@@ -281,11 +286,24 @@ header {
 .social-link:hover {
   background-color: var(--accent-color);
 }
+.social-link:hover .networks-icon {
+  fill: var(--invert-text-color);
+}
 .clients {
   display: flex;
   margin-top: 50px;
 }
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+}
 .client-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-basic-color);
@@ -299,8 +317,7 @@ header {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .client-icon {
-  margin: 16px 32px;
-  align-content: center;
+  margin: auto;
   fill: var(--icon-basic-color);
 }
 .client-icon:hover {
