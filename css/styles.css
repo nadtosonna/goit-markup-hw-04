@@ -133,6 +133,8 @@ header {
   align-items: center;
 }
 .contacts .link {
+  display: flex;
+  align-items: center;
   padding: 32px 0;
   color: var(--main-text-color);
   font-weight: 500;
@@ -246,7 +248,9 @@ header {
 .team-member {
   margin-right: 30px;
   background-color: var(--invert-text-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-member:nth-child(4) {
   margin-right: 0;
@@ -289,40 +293,42 @@ header {
 .social-link:hover .networks-icon {
   fill: var(--invert-text-color);
 }
-.clients {
-  display: flex;
-  margin-top: 50px;
-}
-.client-link {
+.clients-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 92px;
+  margin-top: 50px;
 }
-.client-block {
+.client {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-basic-color);
-  border-radius: 2px;
+  border-radius: 4px;
 }
-.client-block:not(:last-child) {
+.client:not(:last-child) {
   margin-right: 30px;
+}
+.client-block {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .client-block:hover {
   border: 1px solid var(--accent-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.client-icon {
-  margin: auto;
-  fill: var(--icon-basic-color);
+.client:hover {
+  border: 1px solid var(--accent-color);
 }
-.client-icon:hover {
+.client:hover .client-icon {
   fill: var(--accent-color);
 }
+.client-icon {
+  fill: var(--icon-basic-color);
+}
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -330,7 +336,7 @@ header {
 }
 .footer-block {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .logo.footer-logo {
   margin-right: 0;
@@ -353,12 +359,8 @@ header {
 }
 .socials {
   margin-left: 70px;
-  margin-bottom: 20px;
 }
 .join {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -400,9 +402,10 @@ header {
 .portfolio-button {
   padding: 6px 22px;
   cursor: pointer;
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
   color: var(--header-text-color);
   background-color: var(--button-background);
   border-radius: 4px;
@@ -428,7 +431,8 @@ header {
   margin-bottom: 30px;
 }
 .projects-item:hover {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .projects-item:nth-child(3n) {
   margin-right: 0;
