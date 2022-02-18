@@ -319,6 +319,9 @@ header {
 .client-link:hover .client-icon {
   fill: var(--accent-color);
 }
+.client-link:focus .client-icon {
+  fill: var(--accent-color);
+}
 .client-icon {
   fill: var(--icon-basic-color);
 }
